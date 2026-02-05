@@ -1,0 +1,50 @@
+<div class="AddFeed min-vh-100 container-fluid d-flex flex-column justify-content-center p-3 align-items-center">
+    <form [formGroup]="feedForm" (ngSubmit)="onSubmit()"
+        class="d-flex flex-column justify-content-center align-items-center py-3 w-50 shadow-lg rounded border border-success border-2 libertinus-sans-regular">
+        <div class="w-75 d-flex align-items-center justify-content-between mb-3">
+            <h2 class="text-center bricolage-grotesque-Font">{{editId? 'Edit Feed':'Add New Feed'}}</h2>
+            <button class="btn btn-success rounded-pill" routerLink="/supplier/view-feed">Go Back</button>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="feedName" id="feedName" formControlName="feedName"
+                placeholder="Feed Name">
+            <div class="error-message" *ngIf="feedForm.get('feedName')?.invalid && formSubmitted">
+                <small *ngIf="feedForm.get('feedName')?.errors?.['required']">Feed Name is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="type" id="type" formControlName="type" placeholder="Type">
+            <div class="error-message" *ngIf="feedForm.get('type')?.invalid && formSubmitted">
+                <small *ngIf="feedForm.get('type')?.errors?.['required']">Feed Type is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <textarea class="form-control" name="description" id="description" cols="20" rows="2"
+                placeholder="Description" formControlName="description"></textarea>
+            <div class="error-message" *ngIf="feedForm.get('description')?.invalid && formSubmitted">
+                <small *ngIf="feedForm.get('description')?.errors?.['required']">Description is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="unit" id="unit" formControlName="unit" placeholder="Unit">
+            <div class="error-message" *ngIf="feedForm.get('unit')?.invalid && formSubmitted">
+                <small *ngIf="feedForm.get('unit')?.errors?.['required']">Unit is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="number" name="availableUnits" id="availableUnits"
+                formControlName="availableUnits" placeholder="available Units">
+            <div class="error-message" *ngIf="feedForm.get('availableUnits')?.invalid && formSubmitted">
+                <small *ngIf="feedForm.get('availableUnits')?.errors?.['required']">Quantity is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-2">
+            <input class="form-control" type="number" name="pricePerUnit" id="pricePerUnit" formControlName="pricePerUnit"
+                placeholder="Price Per Unit">
+            <div class="error-message" *ngIf="feedForm.get('pricePerUnit')?.invalid && formSubmitted">
+                <small *ngIf="feedForm.get('pricePerUnit')?.errors?.['required']">Price Per Unit is required</small>
+            </div>
+        </div>
+        <button class="w-75 btn btn-success">{{editId? 'Update Feed':'Add Feed'}}</button>
+    </form>
+</div>

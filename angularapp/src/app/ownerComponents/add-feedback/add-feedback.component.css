@@ -1,0 +1,21 @@
+.feedback-container {
+    background-image: url('https://www.shutterstock.com/image-vector/green-tea-botanical-on-horizontal-600nw-2671194797.jpg');
+    object-fit: cover;
+    min-height: calc(100vh - 60px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.libertinus-sans-bold {
+    font-family: "Libertinus Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.selected {
+    transform: scale(1.2);
+    border-bottom: 2px solid green;
+}

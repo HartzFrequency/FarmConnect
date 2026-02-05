@@ -1,0 +1,19 @@
+.AddLivestock {
+    background-image: url('https://www.shutterstock.com/image-vector/green-tea-botanical-on-horizontal-600nw-2671194797.jpg');
+    object-fit: cover;
+}
+
+.preview{
+    max-width: 200px;
+    border: 1px solid #ccc;
+}
+
+.bricolage-grotesque-Font {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    /* weight value should be b/w 200-800*/
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;  
+}

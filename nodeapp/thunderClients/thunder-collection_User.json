@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "User",
+    "dateExported": "2025-11-11T09:26:13.706Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2da66be3-1aa4-45b7-837b-93d82db52d6b",
+            "colId": "41a46653-9c2f-4131-9b55-ab9346c5dd65",
+            "containerId": "",
+            "name": "register",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/user/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-11-11T09:18:30.719Z",
+            "modified": "2025-11-11T09:24:47.448Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n\"userName\": \"Prabhu Sekar\",\r\n\"email\": \"prabhu@gmail.com\",\r\n\"mobile\": \"1237897892\",\r\n\"password\": \"Password123\",\r\n\"role\": \"Owner\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e5ac45e4-73c9-4432-bce3-0932d779e80b",
+            "colId": "41a46653-9c2f-4131-9b55-ab9346c5dd65",
+            "containerId": "",
+            "name": "login",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/user/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-11-11T09:25:01.251Z",
+            "modified": "2025-11-11T09:25:49.974Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"prabhu@gmail.com\",\n  \"password\":\"Password123\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

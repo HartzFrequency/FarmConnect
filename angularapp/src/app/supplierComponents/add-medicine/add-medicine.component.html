@@ -1,0 +1,64 @@
+<div class="AddMedicine min-vh-100 container-fluid p-3 d-flex justify-content-center align-items-center bg-light">
+    <form [formGroup]="medicineForm" (ngSubmit)="onSubmit()"
+        class="d-flex flex-column justify-content-center align-items-center p-3 w-50 shadow-lg rounded border border-success border-2 libertinus-sans-regular">
+        <div class="w-75 d-flex align-items-center justify-content-between mb-3">
+            <h2 class="text-center bricolage-grotesque-Font">{{currentId?'Edit Medicine':'Add New Medicine'}}</h2>
+            <button class="btn btn-success rounded-pill" routerLink="/supplier/view-medicine">Go Back</button>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3"> 
+            <input class="form-control" type="text" name="medicineName" id="medicineName" formControlName="medicineName" placeholder="Medicine Name">
+            <div class="error-message" *ngIf="medicineForm.get('medicineName')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('medicineName')?.errors?.['required']">Medicine Name is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="type" id="type" formControlName="type" placeholder="Type">
+            <div class="error-message" *ngIf="medicineForm.get('type')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('type')?.errors?.['required']">Feed Type is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <textarea class="form-control" name="description" id="description" cols="20" rows="2" formControlName="description" placeholder="Description"></textarea>
+            <div class="error-message" *ngIf="medicineForm.get('description')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('description')?.errors?.['required']">Description is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="dosage" id="dosage" formControlName="dosage" placeholder="Dosage">
+            <div class="error-message" *ngIf="medicineForm.get('dosage')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('dosage')?.errors?.['required']">Dosage is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="number" name="pricePerUnit" id="pricePerUnit" formControlName="pricePerUnit" placeholder="Price Per Unit">
+            <div class="error-message" *ngIf="medicineForm.get('pricePerUnit')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('pricePerUnit')?.errors?.['required']">Price Per Unit is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="unit" id="unit" formControlName="unit" placeholder="Unit">
+            <div class="error-message" *ngIf="medicineForm.get('unit')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('unit')?.errors?.['required']">Unit is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="number" name="availableUnits" id="availableUnits" formControlName="availableUnits" placeholder="Available Units">
+            <div class="error-message" *ngIf="medicineForm.get('availableUnits')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('availableUnits')?.errors?.['required']">Available Units are required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="manufacturer" id="manufacturer" formControlName="manufacturer" placeholder="Manufacturer">
+            <div class="error-message" *ngIf="medicineForm.get('manufacturer')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('manufacturer')?.errors?.['required']">Manufacturer are required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-2">
+            <input class="form-control" type="date" name="expiryDate" id="expiryDate" formControlName="expiryDate" placeholder="Expiry Date">
+            <div class="error-message" *ngIf="medicineForm.get('expiryDate')?.invalid && formSubmitted">
+                <small *ngIf="medicineForm.get('expiryDate')?.errors?.['required']">Manufacturer is required</small>
+            </div>
+            <button class="w-100 btn btn-success mt-3" type="submit">{{currentId?'Edit Medicine':'Add Medicine'}}</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,67 @@
+.bricolage-grotesque-Font {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    /* weight value should be b/w 200-800*/
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;  
+}
+ 
+.libertinus-sans-regular {
+    font-family: "Libertinus Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+.libertinus-sans-bold {
+    font-family: "Libertinus Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+ 
+.libertinus-sans-regular-italic {
+    font-family: "Libertinus Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+ 
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.custom-navbar {
+    background-color: #236a55;
+}
+ 
+.nowrap-text {
+    white-space: nowrap;
+}
+ 
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+}
+ 
+.nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+ 
+.badge {
+    font-size: 0.9rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}

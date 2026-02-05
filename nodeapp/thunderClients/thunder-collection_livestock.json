@@ -1,0 +1,103 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "livestock",
+    "dateExported": "2025-11-11T06:48:24.123Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8c45629b-c5bc-4429-9b0d-4e666d0dc1df",
+            "colId": "131d7e64-00db-4aa4-a494-1b1f7a9f58a1",
+            "containerId": "",
+            "name": "add",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/livestock/addLivestock",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-11-11T06:28:28.828Z",
+            "modified": "2025-11-11T06:44:02.612Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Max\",\n  \"species\": \"Goat\",\n  \"age\": 2,\n  \"breed\": \"Saanen\",\n  \"healthCondition\": \"Healthy\",\n  \"location\": \"Farm A\",\n  \"vaccinationStatus\": \"Up to date\",\n  \"attachment\": \"saanen_photo.jpg\",\n  \"userId\": \"6912c9d16204e7d546d1eff1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9064d325-4b43-4bb5-ba7c-ce927cbf73b0",
+            "colId": "131d7e64-00db-4aa4-a494-1b1f7a9f58a1",
+            "containerId": "",
+            "name": "getAll",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/livestock/getAllLivestock",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-11-11T06:33:21.759Z",
+            "modified": "2025-11-11T06:33:55.635Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d1680bd6-ff71-4f96-9a6d-1276cc20caa9",
+            "colId": "131d7e64-00db-4aa4-a494-1b1f7a9f58a1",
+            "containerId": "",
+            "name": "getById",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/livestock/getLivestockById/6912d8675a72f2b15b0abd71",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-11-11T06:34:19.514Z",
+            "modified": "2025-11-11T06:35:48.849Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5bd87731-2c59-48fe-9c5f-b563e179ca52",
+            "colId": "131d7e64-00db-4aa4-a494-1b1f7a9f58a1",
+            "containerId": "",
+            "name": "getByUserId",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/livestock/getLivestockByUser/6912c9d16204e7d546d1eff1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-11-11T06:36:19.543Z",
+            "modified": "2025-11-11T06:37:00.165Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "976fd327-51de-4b98-ac86-b30e3da6b9d0",
+            "colId": "131d7e64-00db-4aa4-a494-1b1f7a9f58a1",
+            "containerId": "",
+            "name": "updateStock",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/livestock/updateLivestock/6912d8675a72f2b15b0abd71",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-11-11T06:38:01.209Z",
+            "modified": "2025-11-11T06:40:36.075Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Belly\",\n  \"species\": \"Cow\",\n  \"age\": 4,\n  \"breed\": \"Holstein\",\n  \"healthCondition\": \"Healthy\",\n  \"location\": \"Farm B\",\n  \"vaccinationStatus\": \"Up to date\",\n  \"attachment\": \"bella_photo.jpg\",\n  \"userId\": \"6912c9d16204e7d546d1eff1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "121f5a85-fb18-470f-b9b7-9e609c67a6de",
+            "colId": "131d7e64-00db-4aa4-a494-1b1f7a9f58a1",
+            "containerId": "",
+            "name": "delete",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/livestock/deleteLivestock/6912db3109498819ff48644e",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2025-11-11T06:44:17.057Z",
+            "modified": "2025-11-11T06:45:36.350Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+.table-responsive{
+    font-size: 18px;
+}
+.th-bgColor{
+    background-color:#61c1a5;
+}
+.custom-btn{
+    height: 32px;
+}
+.ac-btn{
+    transform: scale(0.8);
+}

@@ -1,0 +1,73 @@
+<div class="AddLivestock min-vh-100 container-fluid d-flex flex-column justify-content-center align-items-center p-3">
+    <form [formGroup]="liveStockForm" (ngSubmit)="onSubmit()" class="d-flex flex-column justify-content-center align-items-center pb-3 pt-3 w-50 
+        shadow-lg rounded border border-success border-2 bg-white libertinus-sans-regular">
+        <div class="w-75 d-flex align-items-center justify-content-between mb-3">
+            <h2 class="text-center bricolage-grotesque-Font">{{editId? 'Edit Livestock':'Add New Livestock'}}</h2>
+            <button class="btn btn-success rounded-pill" routerLink="/owner/livestock">Go Back</button>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="name" id="name" formControlName="name"
+                placeholder="Live Stock Name">
+            <div class="error-message text-danger" *ngIf="liveStockForm.get('name')?.invalid && formSubmitted">
+                <small *ngIf="liveStockForm.get('name')?.errors?.['required']">Feed Name is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="species" id="species" formControlName="species"
+                placeholder="Species">
+            <div class="error-message text-danger" *ngIf="liveStockForm.get('species')?.invalid && formSubmitted">
+                <small *ngIf="liveStockForm.get('species')?.errors?.['required']">Species is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input type="number" class="form-control" name="age" id="age" formControlName="age" placeholder="Age">
+            <div class="error-message text-danger" *ngIf="liveStockForm.get('age')?.invalid && formSubmitted">
+                <small *ngIf="liveStockForm.get('age')?.errors?.['required']">Age is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="breed" id="breed" formControlName="breed" placeholder="Breed">
+            <div class="error-message text-danger" *ngIf="liveStockForm.get('breed')?.invalid && formSubmitted">
+                <small *ngIf="liveStockForm.get('breed')?.errors?.['required']">Breed is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="healthCondition" id="healthCondition"
+                formControlName="healthCondition" placeholder="Health Condition">
+            <div class="error-message text-danger" *ngIf="liveStockForm.get('healthCondition')?.invalid && formSubmitted">
+                <small *ngIf="liveStockForm.get('healthCondition')?.errors?.['required']">Health Condition is
+                    required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="location" id="location" formControlName="location"
+                placeholder="Location">
+            <div class="error-message text-danger" *ngIf="liveStockForm.get('location')?.invalid && formSubmitted">
+                <small *ngIf="liveStockForm.get('location')?.errors?.['required']">Location is required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input class="form-control" type="text" name="vaccinationStatus" id="vaccinationStatus"
+                formControlName="vaccinationStatus" placeholder="Vaccination Status">
+            <div class="error-message text-danger" *ngIf="liveStockForm.get('vaccinationStatus')?.invalid && formSubmitted">
+                <small *ngIf="liveStockForm.get('vaccinationStatus')?.errors?.['required']">Vaccination Status is
+                    required</small>
+            </div>
+        </div>
+        <div class="w-75 form-group d-flex flex-column mb-3">
+            <input type="file" id="attachment" (change)="handleFileChange($event)" class="form-control"
+                [ngClass]="{ 'is-invalid': f['attachment'].touched && f['attachment'].errors }"
+                formControlName="attachment">
+            <div *ngIf="coverImageBase64" class="mt-2">
+                <img [src]="coverImageBase64" alt="Cover-img" class="img-thumbnail" style="max-height: 200px;">
+            </div>
+            <div class="error-message text-danger" *ngIf="f['attachment'].errors && formSubmitted">
+                <div *ngIf="f['attachment'].errors['required']">Cover Image is required</div>
+                <div *ngIf="f['attachment'].errors['invalidType']">Invalid file type. Only JPG, JPEG, PNG are allowed.
+                </div>
+                <div *ngIf="f['attachment'].errors['invalidSize']">File size exceeds 5MB limit.</div>
+            </div>
+        </div>
+        <button class="w-75 btn btn-success">{{editId? 'Update Livestock':'Add Livestock'}}</button>
+    </form>
+</div>

@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "feed",
+    "dateExported": "2025-11-11T12:06:16.222Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2036994a-d589-41a1-895c-3a7f5553d748",
+            "colId": "2121ae09-3edd-462a-9d36-e0f5d156d6d1",
+            "containerId": "",
+            "name": "getAll",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/feed/getAllFeeds",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-11-11T11:56:33.393Z",
+            "modified": "2025-11-11T11:57:04.006Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4bf6b215-064b-4bd1-aa59-c066d69d268e",
+            "colId": "2121ae09-3edd-462a-9d36-e0f5d156d6d1",
+            "containerId": "",
+            "name": "addFeed",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/feed/addFeed",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-11-11T11:57:13.152Z",
+            "modified": "2025-11-11T12:05:31.339Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"feedName\":\"Premium Goat Feed\",\n  \"type\":\"Live Stock\",\n  \"description\":\"High protein feed optional growth of goats\",\n  \"unit\":\"Kg\",\n  \"pricePerUnit\":\"8.50\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ef2a37c9-928d-4367-94cf-6865efa58e21",
+            "colId": "2121ae09-3edd-462a-9d36-e0f5d156d6d1",
+            "containerId": "",
+            "name": "updateFeed",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/feed/updateFeed/69132549ef7ee24f75a379dd",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-11-11T12:00:38.652Z",
+            "modified": "2025-11-11T12:02:33.735Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"feedName\":\"Premium Chicken Feed\",\n  \"type\":\"Poultry\",\n  \"description\":\"High protein feed optional growth of chickens\",\n  \"unit\":\"Kg\",\n  \"pricePerUnit\":\"2.50\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7cd3f3bc-de31-40ee-8d88-0b7d80b2373b",
+            "colId": "2121ae09-3edd-462a-9d36-e0f5d156d6d1",
+            "containerId": "",
+            "name": "deleteFeed",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/feed/deleteFeed/6913268aef7ee24f75a379e4",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-11-11T12:02:56.916Z",
+            "modified": "2025-11-11T12:05:56.775Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

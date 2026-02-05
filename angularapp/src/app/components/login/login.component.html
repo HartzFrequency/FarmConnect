@@ -1,0 +1,60 @@
+<div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center bg-light">
+    <div class="row w-75 shadow rounded overflow-hidden" style="border-radius: 20px; height: 90vh;">
+        <div class="col-md-6 bg-dark text-dark p-5 d-flex flex-column justify-content-center"
+            style="background-color:#0b3d2e;">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="https://i.ibb.co/fz0b7HpS/image.jpg" alt="logo" class="logo">
+                <h2 class="mb-4 fw-bold text-dark bricolage-grotesque-Font">FarmConnect</h2>
+                <h1 class="fw-bold mb-3 text-dark libertinus-sans-regular">Login To Your Account</h1>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="login()" class="libertinus-sans-regular">
+                <div class="mb-3">
+                    <div class="input-group">
+                        <button class="btn btn-light" disabled><i class="bi bi-envelope-fill"></i></button>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email"
+                            formControlName="email">
+                    </div>
+                    <div *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid">
+                        <small *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</small>
+                        <small *ngIf="loginForm.get('email')?.errors?.['email']">Please enter a valid email</small>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <button class="btn btn-light" disabled><i class="bi bi-lock-fill"></i></button>
+                        <input [type]="showPassword?'text':'password'" name="password" id="password"
+                            placeholder="Enter your password" class="form-control" formControlName="password">
+                        <button class="btn btn-light" type="button" (click)="togglePassword()"><i
+                                [ngClass]="{'bi bi-eye-slash': showPassword,'bi bi-eye':!showPassword}"></i></button>
+                    </div>
+                    <div *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid">
+                        <small *ngIf="loginForm.get ('password')?.errors?.['required']">Password is required</small>
+                        <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6
+                            characters</small>
+                    </div>
+                    <div class="text-end mt-2">
+                        <a routerLink="/forgot-password" class="text-primary libertinus-sans-bold"
+                            style="text-decoration: none;">Forgot Password?</a>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success w-100 mb-3 text-white">Login</button>
+            </form>
+            <p class="text-center libertinus-sans-regular">
+                Don't have an account?
+                <a routerLink="/signup" class="text-primary libertinus-sans-bold" style="text-decoration: none;">Sign
+                    Up</a>
+            </p>
+            <footer class="mt-auto text-center small libertinus-sans-regular">
+                © 2025 FarmConnect. All rights reserved.
+            </footer>`
+        </div>
+        <div class="d-none d-md-flex col-md-6 p-0 ">
+            <img src="https://i.pinimg.com/736x/fd/01/45/fd0145bbb398cc6ecebae40c140a3fd8.jpg" alt="login-img">
+        </div>
+    </div>
+</div>
+<div *ngIf="isLoading"
+    class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white bg-opacity-75"
+    style="z-index: 1050;">
+    <mat-progress-spinner mode="indeterminate" diameter="60" color="primary"></mat-progress-spinner>
+</div>

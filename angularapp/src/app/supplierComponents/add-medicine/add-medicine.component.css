@@ -1,0 +1,32 @@
+.AddMedicine {
+    background-image: url('https://www.shutterstock.com/image-vector/green-tea-botanical-on-horizontal-600nw-2671194797.jpg');
+    object-fit: cover;
+}
+
+.bricolage-grotesque-Font {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    /* weight value should be b/w 200-800*/
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+small {
+    color: red;
+}
+
+form {
+    background-color: white;
+}
+
+.form-control {
+    border: 1px solid black;
+}
+
+.btn-warning {
+    background-color: #f0ff6b;
+    color: #000;
+    font-weight: bold;
+}

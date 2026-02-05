@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "request",
+    "dateExported": "2025-11-12T04:00:53.717Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5f1c5658-58cc-4b30-8406-433fe35d9a4c",
+            "colId": "e2f8ca61-cf67-428d-be70-e961cb5e9eaf",
+            "containerId": "",
+            "name": "getAll",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/request/getAllRequests",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-11-12T03:53:29.737Z",
+            "modified": "2025-11-12T03:53:59.752Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "77db07e1-23e5-43db-b2d1-fd528e6d6ad4",
+            "colId": "e2f8ca61-cf67-428d-be70-e961cb5e9eaf",
+            "containerId": "",
+            "name": "getById",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/request/getRequestById/691329b7ef7ee24f75a379ee",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-11-12T03:55:34.922Z",
+            "modified": "2025-11-12T03:57:50.444Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1bee243f-d982-4fe7-8d8c-16fbf9e97103",
+            "colId": "e2f8ca61-cf67-428d-be70-e961cb5e9eaf",
+            "containerId": "",
+            "name": "getByUserId",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/request/getRequestsByUserId/6912c9d16204e7d546d1eff1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-11-12T03:58:12.026Z",
+            "modified": "2025-11-12T03:58:59.831Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "70978b3c-abb1-4665-b527-6d5461e2d272",
+            "colId": "e2f8ca61-cf67-428d-be70-e961cb5e9eaf",
+            "containerId": "",
+            "name": "updateRequest",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/request/updateRequest/691329b7ef7ee24f75a379ee",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-11-12T03:59:24.012Z",
+            "modified": "2025-11-12T04:00:11.819Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"quantity\":101\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

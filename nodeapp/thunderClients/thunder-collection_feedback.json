@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "feedback",
+    "dateExported": "2025-11-12T08:46:16.420Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9e84f388-bbd6-4342-94d2-f4da62c0627d",
+            "colId": "d8664666-1cf8-416e-95cb-77887bcc37f0",
+            "containerId": "",
+            "name": "add",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/feedback/addFeedback",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-11-12T08:18:10.119Z",
+            "modified": "2025-11-12T08:34:12.074Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"title\": \"Great Medicine Quality\",\n    \"description\": \"The Medicine was delivered on time.\",\n    \"category\": \"Medicine\",\n    \"rating\": 5,\n    \"itemId\": \"691445ae21fdb2c9f676242f\", \n    \"supplierId\": \"6912ca706204e7d546d1eff4\",\n    \"ownerId\":\"6912c9d16204e7d546d1eff1\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2a8e9899-d96f-4cf1-ad3c-b3fe8e2d9285",
+            "colId": "d8664666-1cf8-416e-95cb-77887bcc37f0",
+            "containerId": "",
+            "name": "getByUserId",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/feedback/getFeedbacksByOwner/6912c9d16204e7d546d1eff1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-11-12T08:22:54.585Z",
+            "modified": "2025-11-12T08:23:32.118Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "04cb6b94-56b9-4e48-9056-f2197f34eeeb",
+            "colId": "d8664666-1cf8-416e-95cb-77887bcc37f0",
+            "containerId": "",
+            "name": "getWeird",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/feedback/supplier/6912ca706204e7d546d1eff4/owner/6912c9d16204e7d546d1eff1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-11-12T08:44:11.480Z",
+            "modified": "2025-11-12T08:45:57.597Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

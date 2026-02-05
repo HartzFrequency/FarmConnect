@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Medicine",
+    "dateExported": "2025-11-12T08:39:42.332Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fc10992d-82ce-4ef2-9fc8-19c240722c5e",
+            "colId": "84ef3ac1-1539-41b6-a65d-f6fc24e87a62",
+            "containerId": "",
+            "name": "addMed",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/medicine/addMedicine",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-11-12T08:26:14.300Z",
+            "modified": "2025-11-12T08:30:36.432Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"medicineName\": \"Amoxicillin\",\r\n    \"type\": \"Antibiotic\",\r\n    \"description\": \"Used to treat bacterial infections.\",\r\n    \"dosage\": \"500mg twice daily\",\r\n    \"pricePerUnit\": 15.5,\r\n    \"unit\": \"tablet\",\r\n    \"availableUnits\": 100,\r\n    \"manufacturer\": \"ABC Pharma Ltd\",\r\n    \"expiryDate\": \"2026-12-31\",\r\n    \"supplierId\": \"6912ca706204e7d546d1eff4\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "05d580e7-27d2-488d-9dd4-0c5bd4965e57",
+            "colId": "84ef3ac1-1539-41b6-a65d-f6fc24e87a62",
+            "containerId": "",
+            "name": "getAll",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/medicine/getAllMedicines",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-11-12T08:31:10.140Z",
+            "modified": "2025-11-12T08:31:30.557Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3f19a467-6526-426a-b7c7-6d9a1348e246",
+            "colId": "84ef3ac1-1539-41b6-a65d-f6fc24e87a62",
+            "containerId": "",
+            "name": "getById",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/medicine/getMedicineById/691445ae21fdb2c9f676242f",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-11-12T08:32:50.593Z",
+            "modified": "2025-11-12T08:33:35.243Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9737361b-5306-4939-9e0f-242d4bca6a69",
+            "colId": "84ef3ac1-1539-41b6-a65d-f6fc24e87a62",
+            "containerId": "",
+            "name": "update",
+            "url": "https://ide-adeeabbeeefbdfceeebeaeddafbdafabaec.premiumproject.examly.io/proxy/8080/api/v1/medicine/updateMedicine/691445ae21fdb2c9f676242f",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-11-12T08:36:01.042Z",
+            "modified": "2025-11-12T08:39:22.401Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"availableUnits\":98\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+<nav *ngIf="isNotLoggedIn" class="navbar navbar-expand-lg navbar-dark custom-navbar" >
+    <div class="container-fluid">
+        <div class="me-2">
+            <img src="https://i.ibb.co/fz0b7HpS/image.jpg" alt="logo" class="logo">
+        </div> 
+        <a routerLink="/owner" class="navbar-brand bricolage-grotesque-Font">FarmConnect</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navComponents">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navComponents">
+            <ul class="navbar-nav ms-auto d-flex align-items-center bricolage-grotesque-Font">
+                <li class="nav-item p-2">
+                    <button mat-raised-button routerLink="/login">Login</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="home container-fluid min-vh-80 d-flex flex-column p-3">
+    <div class="shadow-lg rounded">
+
+        <div class="container-fluid text-white vh-30">
+            <div class="banner position-relative p-2">
+                <img src="../../../assets/images/farmconnect.png" class="rounded" alt="home_page_banner">
+                <div
+                    class="d-flex flex-column justify-content-center align-items-center gap-2 position-absolute top-50 start-50 translate-middle">
+                    <div class="title-container p-2 rounded" style="background-color: rgba(255, 255, 255, 0.25);">
+                        <p class="display-6 fw-bold text-white text-center opacity-100 bricolage-grotesque-Font">
+                            FarmConnect 🚜</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 pt-0 ">
+            <p class="home-page-text libertinus-sans-regular text-center py-5 px-3 mb-0">Welcome to
+                <b>Farm Connect</b>
+                as Success in livestock farming starts with the right connections.
+                FarmConnect bridges the gap between livestock owners and feed sellers,
+                ensuring access to quality feed and resources for healthier, thriving animals
+            </p>
+        </div>
+    </div>
+</div>
+<footer class="footer text-light pt-5 pb-3" style="background-color: #241e1a;">
+    <div class="container">
+        <div class="row text-center text-md-start">
+
+            <div class="col-md-6 mb-4">
+                <h4 class="fw-bold libertinus-sans-bold text-white text-center">About FarmConnect</h4>
+                <p class="contact-page-text libertinus-sans-regular text-center py-3 px-3 mb-0">
+                    <b>FarmConnect</b> is your trusted partner in livestock farming. We empower farmers by connecting
+                    them
+                    with reliable feed suppliers and essential resources. Our mission is to ensure healthier animals and
+                    sustainable farming practices through strong, meaningful connections. <br><br>
+                    <strong>Join us today and make farming smarter, easier, and more profitable!</strong>
+                </p>
+            </div>
+
+
+            <div class="col-md-6 mb-4 libertinus-sans-regular">
+                <h4 class="text-center text-white libertinus-sans-bold">Contact Us</h4>
+                <p class="text-center py-3 px-3 mb-0"><strong>Phone:</strong> +91 8109288418<br>
+                    <strong>Email:</strong> support@farmconnect.com<br>
+                    <strong>Address:</strong> LtiMindtree, kalinga Bhubaneswar, India
+                </p>
+            </div>
+        </div>
+        <hr class="bg-secondary" />
+        <p class="text-center mb-0 libertinus-sans-regular">&copy; 2025 FarmConnect. All Rights Reserved.</p>
+    </div>
+</footer>

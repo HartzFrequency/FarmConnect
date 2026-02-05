@@ -1,0 +1,69 @@
+<div class="viewFeed container-fluid min-vh-100 d-flex flex-column p-3">
+    <div class="container-fluid shadow-lg rounded py-3 min-vh-100">
+      <p class="display-6 text-center my-3 bricolage-grotesque-Font">Feedbacks</p>
+  
+      <div class="container-fluid py-4">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Search by item name..." (input)="search($event)">
+        </div>
+  
+        <div class="table-responsive rounded">
+          <table class="table table-hover shadow">
+            <thead class="libertinus-sans-bold">
+              <tr>
+                <th class="th-bgColor text-center">SNo</th>
+                <th class="th-bgColor text-center">Category</th>
+                <th class="th-bgColor text-center">Item Name</th>
+                <th class="th-bgColor text-center">Rating</th>
+                <th class="th-bgColor text-center">Owner Name</th>
+                <th class="th-bgColor text-center">Review Text</th>
+                <th class="th-bgColor text-center">Review Date</th>
+              </tr>
+            </thead>
+  
+            <tbody *ngIf="filteredFeedbacks.length > 0 && !loading" class="libertinus-sans-regular">
+              <tr *ngFor="let feedback of paginatedFeedbacks; let i = index">
+                <td class="text-center">{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                <td class="text-center">{{ feedback.category }}</td>
+                <td class="text-center">
+                  {{ feedback.itemId?.feedName || feedback.itemId?.medicineName }}
+                </td>
+                <td class="text-center">{{ feedback.rating }}</td>
+                <td class="text-center">{{ feedback.userId.userName }}</td>
+                <td class="text-center">{{ feedback.reviewText }}</td>
+                <td class="text-center">{{ feedback.updatedAt | date }}</td>
+              </tr>
+            </tbody>
+  
+            <ng-container *ngIf="loading && !showEmptyMessage">
+              <tbody>
+                <tr>
+                  <td colspan="7" class="text-center align-middle">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
+                      <mat-progress-spinner mode="indeterminate" diameter="40" color="primary"></mat-progress-spinner>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </ng-container>
+  
+            <ng-container *ngIf="showEmptyMessage && !loading">
+              <tbody>
+                <tr>
+                  <td colspan="7" class="text-center">
+                    No feedback available.
+                  </td>
+                </tr>
+              </tbody>
+            </ng-container>
+          </table>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-center align-items-center mt-3 pagination" *ngIf="filteredFeedbacks.length > 0">
+        <button class="btn btn-outline-success btn-sm me-2" (click)="goToPreviousPage()">Prev</button>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+        <button class="btn btn-outline-success btn-sm ms-2" (click)="goToNextPage()">Next</button>
+      </div>
+    </div>
+  </div>

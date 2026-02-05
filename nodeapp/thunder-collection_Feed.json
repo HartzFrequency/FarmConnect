@@ -1,0 +1,84 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Feed",
+    "dateExported": "2025-11-10T10:08:53.254Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "47968484-b7d2-4b13-9028-695027b50685",
+            "colId": "a3ab8603-70e4-40f6-bfa9-1f2bbe49aef6",
+            "containerId": "",
+            "name": "getAllFeeds",
+            "url": "/getAllFeeds",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-11-10T08:40:09.406Z",
+            "modified": "2025-11-10T08:44:09.208Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0a858014-607f-4c99-a6dc-3b2d0470ad02",
+            "colId": "a3ab8603-70e4-40f6-bfa9-1f2bbe49aef6",
+            "containerId": "",
+            "name": "getFeedById",
+            "url": "/getFeedById",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-11-10T08:40:35.770Z",
+            "modified": "2025-11-10T08:45:32.691Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "140e38ad-6d26-4562-9390-6080aca93153",
+            "colId": "a3ab8603-70e4-40f6-bfa9-1f2bbe49aef6",
+            "containerId": "",
+            "name": "addFeed",
+            "url": "/addFeed",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-11-10T08:40:52.172Z",
+            "modified": "2025-11-10T08:54:12.111Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"feedName\":\"Premium Chicken Feed\",\n  \"type\":\"Poultry\",\n  \"description\":\"High protein feed for optimal growth of chickens\",\n  \"unit\":\"kg\",\n  \"pricePerUnit\":\"2.50\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c6ec50bc-3832-4c9e-8cff-a10c7a80194a",
+            "colId": "a3ab8603-70e4-40f6-bfa9-1f2bbe49aef6",
+            "containerId": "",
+            "name": "updateFeed",
+            "url": "/updateFeed",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-11-10T08:41:16.980Z",
+            "modified": "2025-11-10T08:46:17.919Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "be50e895-60e1-49bd-a76e-6a4d5a24adb4",
+            "colId": "a3ab8603-70e4-40f6-bfa9-1f2bbe49aef6",
+            "containerId": "",
+            "name": "deleteFeed",
+            "url": "/deleteFeed",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2025-11-10T08:41:34.722Z",
+            "modified": "2025-11-10T08:46:33.387Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

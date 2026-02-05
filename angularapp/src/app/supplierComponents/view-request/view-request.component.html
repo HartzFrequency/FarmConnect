@@ -1,0 +1,80 @@
+<div class="viewRequest container-fluid min-vh-100 d-flex flex-column p-3">
+    <div class="container-fluid shadow-lg rounded py-3 min-vh-100">
+      <p class="display-6 text-center my-3 bricolage-grotesque-Font">Requests</p>
+  
+      <div class="container-fluid py-4">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Search by item name..." (input)="search($event)">
+        </div>
+  
+        <div class="table-responsive rounded">
+          <table class="table table-hover shadow">
+            <thead class="libertinus-sans-bold">
+              <tr>
+                <th class="th-bgColor text-center">SNo</th>
+                <th class="th-bgColor text-center">Item Name</th>
+                <th class="th-bgColor text-center">User Name</th>
+                <th class="th-bgColor text-center">Livestock</th>
+                <th class="th-bgColor text-center">Quantity</th>
+                <th class="th-bgColor text-center">Status</th>
+                <th class="th-bgColor text-center">Request Date</th>
+                <th class="th-bgColor text-center">Action</th>
+              </tr>
+            </thead>
+  
+            <tbody *ngIf="filteredRequests.length > 0 && !loading" class="libertinus-sans-regular">
+              <tr *ngFor="let request of paginatedRequests; let i = index">
+                <td class="text-center">{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                <td class="text-center">{{ request.itemId?.feedName || request.itemId?.medicineName }}</td>
+                <td class="text-center">{{ request.userId.userName }}</td>
+                <td class="text-center">{{ request.species }}</td>
+                <td class="text-center">{{ request.quantity }}</td>
+                <td class="text-center">{{ request.status }}</td>
+                <td class="text-center">{{ request.requestDate | date }}</td>
+                <td class="d-flex justify-content-center align-items-center flex-wrap gap-2">
+                  <button (click)="approveRequest(request._id)"
+                          [disabled]="request.status === 'Approved' || request.status === 'Rejected'"
+                          class="custom-btn" mat-raised-button style="background-color: #61c1a5;">
+                    Approve
+                  </button>
+                  <button (click)="rejectRequest(request._id)"
+                          [disabled]="request.status === 'Rejected' || request.status === 'Approved'"
+                          class="custom-btn" mat-raised-button style="background-color: #e57373;">
+                    Reject
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+  
+            <ng-container *ngIf="loading && !showEmptyMessage">
+              <tbody>
+                <tr>
+                  <td colspan="8" class="text-center align-middle">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
+                      <mat-progress-spinner mode="indeterminate" diameter="40" color="primary"></mat-progress-spinner>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </ng-container>
+  
+            <ng-container *ngIf="showEmptyMessage && !loading">
+              <tbody>
+                <tr>
+                  <td colspan="8" class="text-center">
+                    No requests available.
+                  </td>
+                </tr>
+              </tbody>
+            </ng-container>
+          </table>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-center align-items-center mt-3 pagination" *ngIf="filteredRequests.length > 0">
+        <button class="btn btn-outline-success btn-sm me-2" (click)="goToPreviousPage()">Prev</button>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+        <button class="btn btn-outline-success btn-sm ms-2" (click)="goToNextPage()">Next</button>
+      </div>
+    </div>
+  </div>

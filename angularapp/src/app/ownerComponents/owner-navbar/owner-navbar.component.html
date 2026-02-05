@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+        <div class="me-2">
+            <img src="https://i.ibb.co/fz0b7HpS/image.jpg" alt="logo" class="logo">
+        </div> 
+        <a routerLink="/owner" class="navbar-brand bricolage-grotesque-Font">FarmConnect</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navComponents">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navComponents">
+            <ul class="navbar-nav ms-auto d-flex align-items-center bricolage-grotesque-Font">
+                <li>
+                    <div class="d-flex align-items-center border border-light text-light rounded-pill px-2"
+                        style="background-color: #234c2f; height: 30px;">
+                        <span class="material-icons me-1">account_circle</span>
+                        <span class="me-1">{{userName | titlecase}}</span> /
+                        <span class="fw-bold ms-1">{{userRole | titlecase}}</span>
+                    </div>
+                </li>
+                <li class="nav-item p-2"><a routerLink="/owner" class="nav-link text-white">Home</a></li>
+                <li class="nav-item p-2">
+                    <button mat-button [matMenuTriggerFor]="Resources" class="text-white bricolage-grotesque-Font">
+                        Resources
+                        <mat-icon iconPositionEnd>arrow_drop_down</mat-icon>
+                    </button>
+                    <mat-menu #Resources="matMenu">
+                        <button mat-menu-item [matMenuTriggerFor]="supplies">Supplies</button>
+                        <button mat-menu-item [matMenuTriggerFor]="livestock">Livestock</button>
+                    </mat-menu>
+
+                    <mat-menu #supplies="matMenu">
+                        <button mat-menu-item routerLink="/owner/viewfeed">Feed</button>
+                        <button mat-menu-item routerLink="/owner/viewMedicine">Medicine</button>
+                    </mat-menu>
+
+                    <mat-menu #livestock="matMenu">
+                        <button mat-menu-item routerLink="/owner/livestock-form">Add Livestock</button>
+                        <button mat-menu-item routerLink="/owner/livestock">View Livestock</button>
+                    </mat-menu>
+                </li>
+                <li class="nav-item p-2"><a routerLink="/error" class="nav-link text-white nowrap-text"
+                        routerLink="/owner/my-request">My Request</a>
+                </li>
+                <li class="nav-item p-2">
+                    <button mat-raised-button color="warn" (click)="onLogout()" routerLink="/">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
